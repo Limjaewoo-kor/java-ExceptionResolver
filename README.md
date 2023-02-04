@@ -51,3 +51,7 @@ HandlerExceptionResolverComposite 에 다음 순서로 등록되어있다.
 3. DefaultHandlerExceptionResolver 우선 순위가 가장 낮다  
 스프링에서 자체적으로 사용하는 ExceptionResolver
 DefaultHandlerExceptionResolver
+
+
+-참고
+https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-exceptionhandler-args
