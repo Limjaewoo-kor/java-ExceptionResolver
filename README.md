@@ -40,8 +40,14 @@ BasicErrorController 상속 받아서 기능을 추가하면 된다.
 HandlerExceptionResolverComposite 에 다음 순서로 등록되어있다.
 
 1. ExceptionHandlerExceptionResolver
+@ExceptionHandler
+
 
 2. ResponseStatusExceptionResolver
   어노테이션으로 지정가능한 ExceptionResolver
+  @ResponseStatus(code = HttpStatus.BAD_REQUEST, reason = "error.bad")
+  
+  
 3. DefaultHandlerExceptionResolver 우선 순위가 가장 낮다  
 스프링에서 자체적으로 사용하는 ExceptionResolver
+DefaultHandlerExceptionResolver
