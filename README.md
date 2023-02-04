@@ -33,3 +33,15 @@
 ## 결론 - 
 에러 공통 처리 기능을 변경하고 싶으면 ErrorController 인터페이스를 상속 받아서 구현하거나, 
 BasicErrorController 상속 받아서 기능을 추가하면 된다. 
+
+
+
+스프링 부트가 기본으로 제공하는 ExceptionResolver 는 다음과 같다. 
+HandlerExceptionResolverComposite 에 다음 순서로 등록되어있다.
+
+1. ExceptionHandlerExceptionResolver
+
+2. ResponseStatusExceptionResolver
+  어노테이션으로 지정가능한 ExceptionResolver
+3. DefaultHandlerExceptionResolver 우선 순위가 가장 낮다  
+스프링에서 자체적으로 사용하는 ExceptionResolver
